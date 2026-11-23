@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kiln Software – Web and mobile apps built to last</title>
+  <meta name="description" content="Kiln Software is a software house in Islamabad building web apps, mobile apps and internal tools.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="#home" class="logo">Kiln<span>.</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact" class="btn btn-small">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HOME -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>Software that holds up after launch.</h1>
+        <p class="lead">We design and build web apps, mobile apps and internal tools for growing companies, and we stay on to keep them running.</p>
+        <div class="actions">
+          <a href="#contact" class="btn">Start a project</a>
+          <a href="#services" class="btn btn-outline">See what we build</a>
+        </div>
+      </div>
+      <div class="slider" id="slider" aria-label="Recent work">
+        <div class="slide active">
+          <h3>Rawalpindi Logistics</h3>
+          <p>A dispatch dashboard that cut manual scheduling from 3 hours to 20 minutes a day.</p>
+        </div>
+        <div class="slide">
+          <h3>Margalla Clinics</h3>
+          <p>A patient booking app used across 12 clinics, with SMS reminders and doctor calendars.</p>
+        </div>
+        <div class="slide">
+          <h3>Saffron Foods</h3>
+          <p>An online ordering platform that handles 2,000 orders on a busy weekend.</p>
+        </div>
+        <div class="slider-controls">
+          <button id="prev" aria-label="Previous project">&#8249;</button>
+          <div class="dots" id="dots"></div>
+          <button id="next" aria-label="Next project">&#8250;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section alt">
+    <div class="container about-grid">
+      <div>
+        <h2>A small team that answers its own phone.</h2>
+        <p>Kiln Software was founded in Islamabad in 2018 by three engineers who were tired of agencies that disappear after delivery. Today we are a team of 24 developers, designers and testers.</p>
+        <p>Every project has one named lead you can call directly. We write plain-language plans, ship in small steps, and hand over clean code with documentation.</p>
+      </div>
+      <ul class="stats">
+        <li><strong>60+</strong> products shipped</li>
+        <li><strong>24</strong> team members</li>
+        <li><strong>92%</strong> clients who come back</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2>What we build</h2>
+      <p class="section-intro">Four services, each delivered by the same team from first sketch to ongoing support.</p>
+      <div class="cards">
+        <article class="card">
+          <h3>Web applications</h3>
+          <p>Customer portals, dashboards and SaaS products built with modern, maintainable code.</p>
+        </article>
+        <article class="card">
+          <h3>Mobile apps</h3>
+          <p>Android and iOS apps from a single codebase, tested on real devices.</p>
+        </article>
+        <article class="card">
+          <h3>UI and UX design</h3>
+          <p>Research, wireframes and clickable prototypes you can test before we write code.</p>
+        </article>
+        <article class="card">
+          <h3>Support and maintenance</h3>
+          <p>Monthly plans covering updates, bug fixes, hosting and security checks.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <div class="container contact-grid">
+      <div>
+        <h2>Tell us what you need built.</h2>
+        <p>We reply within one working day with questions or a rough estimate.</p>
+      </div>
+      <address>
+        <p><strong>Email</strong><br><a href="mailto:hello@kilnsoftware.example">hello@kilnsoftware.example</a></p>
+        <p><strong>Phone</strong><br>+92 51 000 0000</p>
+        <p><strong>Office</strong><br>Blue Area, Islamabad, Pakistan</p>
+        <p><strong>Hours</strong><br>Monday to Friday, 9am to 6pm PKT</p>
+      </address>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="#home" class="logo">Kiln<span>.</span></a>
+      <p>Software that holds up after launch.</p>
+    </div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <p class="copy">&copy; <span id="year">2026</span> Kiln Software. A fictional company for a learning project.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

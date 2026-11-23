@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mistri – Book trusted home service professionals</title>
+  <meta name="description" content="Mistri connects households in Islamabad and Rawalpindi with verified electricians, plumbers, cleaners and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="#home" class="logo">Mistri<span>.</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#providers">Find a pro</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact" class="btn btn-small">Get a quote</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="home">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <h1>Book a trusted professional for any job at home.</h1>
+      <p class="lead">Electricians, plumbers, cleaners and more. Every pro is ID-checked, rated by real customers and priced upfront.</p>
+      <form class="hero-search" id="heroSearch" role="search">
+        <label for="heroQuery" class="visually-hidden">What do you need help with?</label>
+        <input type="search" id="heroQuery" placeholder="Try &quot;AC repair&quot; or &quot;F-10&quot;" autocomplete="off">
+        <button type="submit" class="btn">Search pros</button>
+      </form>
+      <ul class="hero-facts">
+        <li><strong>1,200+</strong> verified pros</li>
+        <li><strong>4.8</strong> average rating</li>
+        <li><strong>Same day</strong> booking available</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SERVICES (rendered from data.js) -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2>Choose a service</h2>
+      <p class="section-intro">Select a category to see the pros who offer it.</p>
+      <div class="service-grid" id="serviceGrid"></div>
+    </div>
+  </section>
+
+  <!-- PROVIDERS (rendered + filtered) -->
+  <section id="providers" class="section alt">
+    <div class="container">
+      <h2>Featured professionals</h2>
+      <div class="toolbar">
+        <div class="field">
+          <label for="searchInput">Search</label>
+          <input type="search" id="searchInput" placeholder="Name, service or area" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="categorySelect">Service</label>
+          <select id="categorySelect"></select>
+        </div>
+        <div class="field">
+          <label for="sortSelect">Sort by</label>
+          <select id="sortSelect">
+            <option value="rating">Highest rated</option>
+            <option value="priceLow">Price: low to high</option>
+            <option value="priceHigh">Price: high to low</option>
+            <option value="experience">Most experienced</option>
+          </select>
+        </div>
+      </div>
+      <p class="result-count" id="resultCount" aria-live="polite"></p>
+      <div class="provider-grid" id="providerGrid"></div>
+      <div class="empty" id="emptyState" hidden>
+        <p><strong>No professionals match your search.</strong></p>
+        <p>Check the spelling, try a different area, or clear your filters.</p>
+        <button class="btn btn-small" id="resetFilters" type="button">Clear filters</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS (rendered from data.js) -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <h2>What customers say</h2>
+      <div class="testimonial-grid" id="testimonialGrid"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <div class="container contact-grid">
+      <div>
+        <h2>Not sure who to book? Ask us.</h2>
+        <p>Describe the job and we will reply within a few hours with suggested pros and a price range.</p>
+        <address>
+          <p><strong>Email</strong><br><a href="mailto:help@mistri.example">help@mistri.example</a></p>
+          <p><strong>Phone</strong><br>+92 51 111 0000</p>
+          <p><strong>Hours</strong><br>Every day, 8am to 10pm PKT</p>
+        </address>
+      </div>
+      <form id="inquiryForm" novalidate>
+        <div class="form-row">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" autocomplete="name">
+          <span class="error" id="nameError" aria-live="polite"></span>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email">
+          <span class="error" id="emailError" aria-live="polite"></span>
+        </div>
+        <div class="form-row">
+          <label for="phone">Mobile number</label>
+          <input type="tel" id="phone" name="phone" placeholder="0300 1234567" autocomplete="tel">
+          <span class="error" id="phoneError" aria-live="polite"></span>
+        </div>
+        <div class="form-row">
+          <label for="service">Service needed</label>
+          <select id="service" name="service"></select>
+          <span class="error" id="serviceError" aria-live="polite"></span>
+        </div>
+        <div class="form-row">
+          <label for="message">Job details</label>
+          <textarea id="message" name="message" rows="4" maxlength="500"></textarea>
+          <span class="counter" id="messageCount">0 / 500</span>
+          <span class="error" id="messageError" aria-live="polite"></span>
+        </div>
+        <button type="submit" class="btn">Send request</button>
+        <p class="form-success" id="formSuccess" role="status" hidden></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="#home" class="logo">Mistri<span>.</span></a>
+      <p>Trusted home services in Islamabad and Rawalpindi.</p>
+    </div>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#providers">Find a pro</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <p class="copy">&copy; <span id="year">2026</span> Mistri. A fictional company for a learning project.</p>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/components.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/form.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
